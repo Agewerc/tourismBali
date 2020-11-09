@@ -5,22 +5,44 @@
 # Find out more about building applications with Shiny here:
 #
 #    http://shiny.rstudio.com/
-#
 
 library(shiny)
+library(shinyWidgets)
+library(gridExtra)
+library(png)
+library(grid)
+
+
+bali_data <- fromJSON(file = "treated_bali_data.json")
+
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-    output$distPlot <- renderPlot({
+    # Side image output
+    output$img2 = renderUI({
+        
+        sup_data <- bali_data
+        sup_vector <- c() 
+        
+        for (i in 1:length(sup_data)){
+            
+            for (label in input$labels){ 
 
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+                if (label %in% unlist(sup_data[[i]]['label'])){
+                    
+                    sup_vector <- c(sup_vector, names(sup_data)[i])
 
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
+                }
+            }
+        }
+        
+        filename <- lapply(sup_vector, function(id) {paste0(id, '.jpg')})
+        imgside <- lapply(filename, function(file){
+                tags$img(src=file, width=400, height=400)
+            })
+        
+            do.call(tagList, imgside)
 
     })
-
 })

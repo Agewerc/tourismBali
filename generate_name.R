@@ -20,7 +20,7 @@ for (i in 1:length(result)){
   vector_labels <- c(vector_labels, result[[i]][['label']] )
   vector_tags <- c(vector_tags, result[[i]][['tags']] )
   vector_countys <- c(vector_countys, result[[i]][['county']] )
-
+  
 }
 
 vector_tags <- str_remove(vector_tags, pattern = "foursquare.*")

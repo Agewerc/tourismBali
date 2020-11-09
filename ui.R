@@ -33,7 +33,7 @@ shinyUI(fluidPage(
                         
                         fluidRow(
                             column(2, selectInput("labels",label="Choose Label",multiple = TRUE, 
-                                                                         choices=label_vector)), 
+                                                                         choices=label_vector, selected ='Beach')), 
                                    
 
                             column(2, selectInput("tags",label="Choose Tag",multiple = TRUE, 
@@ -51,22 +51,23 @@ shinyUI(fluidPage(
                            
                                     tabPanel("Images",
                                              
-                                             lapply(image_list, FUN = function(i) {
-                                                 
-                                                 img(src = paste0(i), height = 400, width = 460) }
+                                             # plotOutput("photos")
+                                             uiOutput("img2")
+                                             
+                                             
+                                             
                                              )
                                              )
-                                    )),
+                                    ),
 
                tabPanel("Regions"),
                tabPanel("Tourits Origin"),
                tabPanel("About")
-    
-
-               
     )
+
     )
 )
+
 
 
 
