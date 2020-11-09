@@ -11,6 +11,7 @@ library(shinyWidgets)
 library(gridExtra)
 library(png)
 library(grid)
+library(leaflet)
 
 
 bali_data <- fromJSON(file = "treated_bali_data.json")
@@ -39,10 +40,21 @@ shinyServer(function(input, output) {
         
         filename <- lapply(sup_vector, function(id) {paste0(id, '.jpg')})
         imgside <- lapply(filename, function(file){
-                tags$img(src=file, width=400, height=400)
+                tags$img(src=file, width=450, height=400)
             })
         
             do.call(tagList, imgside)
 
     })
+    
+
+    output$map <- renderLeaflet({
+        leaflet() %>% addTiles() %>% setView(lat = -8.5, lng = 115.15, zoom = 10)
+        })
+    
+    
+
+    
+    
+    
 })

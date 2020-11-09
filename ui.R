@@ -1,5 +1,5 @@
 #
-# This is the user-interface definition of a Shiny web application. You can
+# Th    is is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
 #
 # Find out more about building applications with Shiny here:
@@ -8,6 +8,8 @@
 #
 
 library(shiny)
+library(leaflet)
+
 
 length(label_vector)
 label_vector <- readRDS("labels.rds")
@@ -46,19 +48,20 @@ shinyUI(fluidPage(
                         
                         tabsetPanel(type = "tabs",
                                     
-                                    tabPanel("Map"),
+                                    tabPanel("Map",
+                                    
+                                    
+                                    leafletOutput("map", width = 1300, height = 700)     
+                                    
+                                    ),
 
                            
                                     tabPanel("Images",
                                              
-                                             # plotOutput("photos")
                                              uiOutput("img2")
-                                             
-                                             
-                                             
-                                             )
                                              )
                                     ),
+                        ),
 
                tabPanel("Regions"),
                tabPanel("Tourits Origin"),
