@@ -9,8 +9,20 @@
 
 library(shiny)
 
+
+label_vector <- readRDS("labels.rds")
+tag_vector <- readRDS("tags.rds")
+county_vector <- readRDS("countys.rds")
+
+
+
+
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
+    
+    sidebarPanel(),
+    
+    mainPanel(
 
     # Application title
     titlePanel("Bali Tourism"),
@@ -19,11 +31,16 @@ shinyUI(fluidPage(
     
     selectInput(
         inputId = 'country_compare',
-        label = 'Select One or More Countries',
-        choices = country_vector,
+        label = 'Select One or More Labels',
+        choices = label_vector,
         multiple = TRUE,
         selected = c('United States', 'Brazil', 'India')
         ),
     
+    
+    img(src = "https://media.timeout.com/images/105240189/image.jpg", height = 72, width = 72)
+    
+    )
+
         )
     )
