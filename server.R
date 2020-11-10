@@ -54,8 +54,7 @@ shinyServer(function(input, output) {
                     sup_vector <- c(sup_vector, names(sup_data)[i])
                     sup_lat <-  c(sup_lat, sup_data[[i]]['latitude'])
                     sup_lon <-  c(sup_lon, sup_data[[i]]['longitude'])
-                    
-                    
+
                 }
             }
         }
@@ -95,34 +94,69 @@ shinyServer(function(input, output) {
       # Side image output
       
       for (i in 1:length(sup_data)){
-        
-        for (label in input$labels){ 
           
-          if (label %in% unlist(sup_data[[i]]['label'])){
-            
-            sup_vector <- c(sup_vector, names(sup_data)[i])
-            sup_lat <-  c(sup_lat, sup_data[[i]]['latitude'])
-            sup_lon <-  c(sup_lon, sup_data[[i]]['longitude'])
-            
+          for (label in input$labels){ 
+              
+              if (label %in% unlist(sup_data[[i]]['label'])){
+                  
+                  sup_vector <- c(sup_vector, names(sup_data)[i])
+                  sup_lat <-  c(sup_lat, sup_data[[i]]['latitude'])
+                  sup_lon <-  c(sup_lon, sup_data[[i]]['longitude'])
+                  
+              }
           }
-        }
       }
       
       
-      df.plot <- data.frame(unlist(sup_vector), unlist(sup_lat), unlist(sup_lon))
-      colnames(df.plot) <- c('id', 'lat', 'lon' )
-      df.plot$lat <- as.numeric(as.character(df.plot$lat)) 
-      df.plot$lon <- as.numeric(as.character(df.plot$lon))
+      for (i in 1:length(sup_data)){
+          
+          for (tag in input$tags){ 
+              
+              if (tag %in% unlist(sup_data[[i]]['tags'])){
+                  
+                  sup_vector <- c(sup_vector, names(sup_data)[i])
+                  sup_lat <-  c(sup_lat, sup_data[[i]]['latitude'])
+                  sup_lon <-  c(sup_lon, sup_data[[i]]['longitude'])
+                  
+                  
+              }
+          }
+      }
       
-
-      leaflet(df.plot) %>%
-        addTiles() %>%
-        setView(lat = -8.48, lng = 115.1, zoom = 10) %>%
-        addCircleMarkers(lng = ~lon, # add marker
-                         color = "#03F",
-                         lat = ~lat,
-                         radius = 1,
-                         popup = paste0("<img src = ", sup_vector, ".jpg>")
+      
+      for (i in 1:length(sup_data)){
+          
+          for (county in input$countys){ 
+              
+              if (county %in% unlist(sup_data[[i]]['county'])){
+                  
+                  sup_vector <- c(sup_vector, names(sup_data)[i])
+                  sup_lat <-  c(sup_lat, sup_data[[i]]['latitude'])
+                  sup_lon <-  c(sup_lon, sup_data[[i]]['longitude'])
+                  
+              }
+          }
+      }
+      
+      
+      if (length(sup_lat) > 0) {
+          
+          df.plot <- data.frame(unlist(sup_vector), unlist(sup_lat), unlist(sup_lon))
+          colnames(df.plot) <- c('id', 'lat', 'lon' )
+          df.plot$lat <- as.numeric(as.character(df.plot$lat)) 
+          df.plot$lon <- as.numeric(as.character(df.plot$lon))
+          
+    
+          leaflet(df.plot) %>%
+            addTiles() %>%
+            setView(lat = -8.48, lng = 115.1, zoom = 10) %>%
+            addCircleMarkers(lng = ~lon, # add marker
+                             color = "#03F",
+                             lat = ~lat,
+                             radius = 1,
+                             popup = paste0("<img src = ", sup_vector, ".jpg>")
+        )
+      }
                          
                          # dashArray = NULL,
                          # weight = 1,
@@ -131,7 +165,7 @@ shinyServer(function(input, output) {
                          # radius = 1
                          #radius = ~total_cases_per_million**(1/2)/8)
 
-)
+
 
     })
     

@@ -34,3 +34,4 @@ vector_countys <- unique(vector_countys)
 saveRDS(vector_labels, file = "labels.Rds")
 saveRDS(vector_tags, file = "tags.Rds")
 saveRDS(vector_countys, file = "countys.Rds")
+
