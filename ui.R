@@ -9,13 +9,13 @@
 
 library(shiny)
 library(leaflet)
+library(rjson)
 
 
 length(label_vector)
 label_vector <- readRDS("labels.rds")
 tag_vector <- readRDS("tags.rds")
 county_vector <- readRDS("countys.rds")
-image_list <- c('5852495442.jpg', '15550188123.jpg', '15582001714.jpg', '15581992784.jpg')
 
 
 
@@ -51,7 +51,7 @@ shinyUI(fluidPage(
                                     tabPanel("Map",
                                     
                                     
-                                    leafletOutput("map", width = 1300, height = 700)     
+                                    leafletOutput("map", height = 700)     
                                     
                                     ),
 

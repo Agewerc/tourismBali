@@ -1,19 +1,18 @@
 
 
+
 # Load the package required to read JSON files.
 library("rjson")
 library('stringr')
 
 # Give the input file name to the function.
-result <- fromJSON(file = "treated_bali_data.json")
+result <- fromJSON(file = "data_bali.json")
 
 vector_labels <- c()
 vector_tags <- c()
 vector_countys <- c()
 vector_imageid <- names(result)
 
-
-names(result)
 
 for (i in 1:length(result)){
   
