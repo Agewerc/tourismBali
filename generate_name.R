@@ -1,6 +1,4 @@
 
-
-
 # Load the package required to read JSON files.
 library("rjson")
 library('stringr')
