@@ -1,0 +1,44 @@
+Country,County,Word1,Word2,Word3,Word4,Word5,Count,percentage
+Australia,Badung Kabupaten,Tree,Sky,Sea,Plant,Ocean,58, 0.10 
+Austria,Buleleng Kabupaten,Natural landscape,Vegetation,Nature,Water,Water resources,4, 0.01 
+Bangladesh,Buleleng Kabupaten,Temple,Black,Black-and-white,Monochrome photography,Sky,2, 0.00 
+Belgium,Gianyar Kabupaten,Nature reserve,Vegetation,Jungle,Natural landscape,Sky,7, 0.01 
+Bhutan,Gianyar Kabupaten,Shore,Water,Coast,Tree,Sea,1, 0.00 
+Brazil,Gianyar Kabupaten,Tradition,Ritual,Festival,Carnival,Event,4, 0.01 
+Bulgaria,Badung Kabupaten,People in nature,White,Water,Photograph,Black,1, 0.00 
+Canada,Gianyar Kabupaten,Building,Tree,Plant,Temple,Tourism,23, 0.04 
+China,Badung Kabupaten,Sky,Sea,Ocean,Building,Tree,14, 0.02 
+Colombia,Badung Kabupaten,Sky,Tree,Vacation,Selfie,Plant,5, 0.01 
+Emirates,Gianyar Kabupaten,Nature,Sky,Natural landscape,Landscape,People,4, 0.01 
+France,Karang Asem,Plant,Tree,Water,Sky,Temple,29, 0.05 
+Germany,Badung Kabupaten,Water,Sea,Sky,Ocean,Tree,33, 0.06 
+Hungary,Buleleng Kabupaten,Macaque,Wildlife,Primate,Vertebrate,Rhesus macaque,1, 0.00 
+India,Gianyar Kabupaten,Plant,Tree,Jungle,Botany,Bird,8, 0.01 
+Indonesia,Badung Kabupaten,Sky,Tree,Event,Plant,Photography,12, 0.02 
+Ireland,Badung Kabupaten,Leisure,Sky,Plant,Vacation,Games,4, 0.01 
+Italy,Gianyar Kabupaten,Tree,Temple,Sky,Plant,Tourism,17, 0.03 
+Japan,Gianyar Kabupaten,Sky,Tree,Plant,Event,Blue,11, 0.02 
+Laos,Badung Kabupaten,Water,Sky,Natural landscape,Blue,Body of water,3, 0.01 
+Malaysia,Gianyar Kabupaten,Vacation,Plant,Tourism,Tree,Child,21, 0.04 
+Netherlands,Buleleng Kabupaten,Temple,Plant,Tree,Building,Tourism,27, 0.05 
+New Zeland,Buleleng Kabupaten,Temple,Event,Building,Tree,Sky,6, 0.01 
+Norway,Gianyar Kabupaten,Sky,Food,Dish,Meal,Building,5, 0.01 
+Philippines,Badung Kabupaten,Sky,Natural landscape,Sea,Nature,Vegetation,8, 0.01 
+Poland,Karang Asem,Organism,Marine biology,Underwater,Fish,Reef,2, 0.00 
+Portugal,Buleleng Kabupaten,Sky,Nature,Atmospheric phenomenon,Cloud,Tree,1, 0.00 
+Qatar,Badung Kabupaten,Property,Sky,House,Botany,Real estate,2, 0.00 
+Russia,Gianyar Kabupaten,Plant,Tree,Sea,Sky,Coast,13, 0.02 
+Saudi Arabia,Tabanan Kabupaten,Sky,Cloud,Water,Nature,Sea,1, 0.00 
+Singapore,Badung Kabupaten,Sea,Coast,Sky,Ocean,Vacation,30, 0.05 
+Slovenia,Gianyar Kabupaten,Dish,Food,Cuisine,Ingredient,Comfort food,1, 0.00 
+South Korea,Badung Kabupaten,Temple,Building,Architecture,Sky,Plant,4, 0.01 
+Spain,Buleleng Kabupaten,Sky,Temple,Sea,Ocean,Hill station,23, 0.04 
+Sweden,Badung Kabupaten,Child,Smile,Vacation,Sky,Tourism,2, 0.00 
+Switzerland,Buleleng Kabupaten,Sky,Tree,Sea,Nature,Natural landscape,15, 0.03 
+Taiwan,Badung Kabupaten,Building,Vacation,Property,Architecture,Room,24, 0.04 
+Thailand,Buleleng Kabupaten,Sky,Sea,Beach,Ocean,Coast,8, 0.01 
+Turkey,Bangli Kabupaten,Jungle,Tree,Swing,Zoo,Plant,1, 0.00 
+UK,Badung Kabupaten,Sky,Building,Architecture,House,Tree,80, 0.14 
+Ukraine,Gianyar Kabupaten,Sky,Plant,Photography,Room,Tree,4, 0.01 
+USA,Gianyar Kabupaten,Tree,Sky,Architecture,Plant,Building,71, 0.12 
+Vietnam,Badung Kabupaten,Palm tree,Resort,Arecales,Tree,Attalea speciosa,2, 0.00 
